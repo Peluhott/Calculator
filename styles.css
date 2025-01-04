@@ -1,0 +1,17 @@
+.buttons {
+    height: 60px;
+    width: 60px;
+}
+
+.doubleSize {
+    height: 60px;
+    width: 120px; 
+    min-width: 120px;
+}
+
+#display {
+    background-color: grey;
+    height: 60px;
+    width: 250px;
+    border: solid black;
+}
