@@ -32,19 +32,23 @@ function evaluate(string){
     switch(string){
         case '+':
         result = addNums(firstVariable, secondVariable);
+        operatorVariable = '';
             break;
     
 
         case '-':
         result = subtractNums(firstVariable, secondVariable);
+        operatorVariable = '';
             break;
     
         case '*':
         result = multiplyNums(firstVariable, secondVariable);
+        operatorVariable = '';
             break;
 
         case '/':
         result = divideNums(firstVariable, secondVariable);
+        operatorVariable = '';
             break;
     }
 
