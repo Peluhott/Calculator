@@ -3,6 +3,8 @@ let firstVariable;
 let secondVariable;
 let operatorVariable;
 let result;
+const display1 = document.querySelector('#display');
+display1.textContent = displayNums;
 
 function addNums (x,y){
 return x + y;
@@ -66,6 +68,13 @@ function evaluate(string){
 
 }
 const buttonInput =  document.querySelector('button');
+const forContainer = document.querySelector('.container');
+forContainer.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {  // Check if a button was clicked
+      displayNums += event.target.value;      // Append the button's value to displayNums
+      display1.textContent = displayNums;     // Update the display
+    }
+  });
 buttonInput.addEventListener("click", (event) => {
     const buttonValue = event.target.innerText;
     if(/^[0-9]$/.test(buttonValue)){
@@ -256,3 +265,4 @@ buttonInput.addEventListener("click", (event) => {
         
     }
 });
+
