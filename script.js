@@ -81,18 +81,111 @@ buttonInput.addEventListener("click", (event) => {
             break;
         
         case '/':
+            if(operatorVariable != ''){
+                if(displayNums[0] == '-'){
+                    displayNums.shift()
+                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    displayNums  = []
+                    evaluate(operatorVariable);
+                }   
+                else {
+                    secondVariable = parseFloat(displayNums.join(''));
+                    displayNums = []
+                    evaluate(operatorVariable);
+                }
+            }
+            operatorVariable = '/';
+            if(displayNums[0] == '-'){
+                displayNums.shift()
+                firstVariable = convertToNegative(parseFloat(displayNums.join('')));
+                displayNums = []
+            }
+            else {
+                firstVariable = parseFloat(displayNums.join(''));
+                displayNums = []
+            }
+            
             //code
             break;
         
         case '*':
+            if(operatorVariable != ''){
+                if(displayNums[0] == '-'){
+                    displayNums.shift()
+                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    displayNums  = []
+                    evaluate(operatorVariable);
+                }   
+                else {
+                    secondVariable = parseFloat(displayNums.join(''));
+                    displayNums = []
+                    evaluate(operatorVariable);
+                }
+            }
+            operatorVariable = '*';
+            if(displayNums[0] == '-'){
+                displayNums.shift()
+                firstVariable = convertToNegative(parseFloat(displayNums.join('')));
+                displayNums = []
+            }
+            else {
+                firstVariable = parseFloat(displayNums.join(''));
+                displayNums = []
+            }
             //code
             break;
         
         case '-':
+            if(operatorVariable != ''){
+                if(displayNums[0] == '-'){
+                    displayNums.shift()
+                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    displayNums  = []
+                    evaluate(operatorVariable);
+                }   
+                else {
+                    secondVariable = parseFloat(displayNums.join(''));
+                    displayNums = []
+                    evaluate(operatorVariable);
+                }
+            }
+            operatorVariable = '-';
+            if(displayNums[0] == '-'){
+                displayNums.shift()
+                firstVariable = convertToNegative(parseFloat(displayNums.join('')));
+                displayNums = []
+            }
+            else {
+                firstVariable = parseFloat(displayNums.join(''));
+                displayNums = []
+            }
             //code
             break;
         
         case '+':
+            if(operatorVariable != ''){
+                if(displayNums[0] == '-'){
+                    displayNums.shift()
+                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    displayNums  = []
+                    evaluate(operatorVariable);
+                }   
+                else {
+                    secondVariable = parseFloat(displayNums.join(''));
+                    displayNums = []
+                    evaluate(operatorVariable);
+                }
+            }
+            operatorVariable = '+';
+            if(displayNums[0] == '-'){
+                displayNums.shift()
+                firstVariable = convertToNegative(parseFloat(displayNums.join('')));
+                displayNums = []
+            }
+            else {
+                firstVariable = parseFloat(displayNums.join(''));
+                displayNums = []
+            }
             //code
             break;
         
