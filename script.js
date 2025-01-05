@@ -56,7 +56,46 @@ function evaluate(string){
 const buttonInput =  document.querySelector('button');
 buttonInput.addEventListener("click", (event) => {
     const buttonValue = event.target.innerText;
-    if(buttonValue == "="){
-        evaluate(buttonValue);
+    switch(buttonValue) {
+        case 'AC':
+            //code
+            break;
+        
+        case '+/-':
+            //code
+            break;
+        
+         case '%':
+            //code
+            break;
+        
+        case '/':
+            //code
+            break;
+        
+        case '*':
+            //code
+            break;
+        
+        case '-':
+            //code
+            break;
+        
+        case '+':
+            //code
+            break;
+        
+        case '=':
+            //code
+            break;
+        
+        case '.':
+            //code
+            break;
+        
+         case '0-9':
+            //code
+            break;
+        
     }
 });
