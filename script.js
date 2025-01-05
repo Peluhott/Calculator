@@ -4,7 +4,8 @@ let secondVariable;
 let operatorVariable;
 let result;
 const display1 = document.querySelector('#display');
-display1.textContent = displayNums;
+function updateDisplay(){
+    display1.textContent = displayNums.join('');}
 
 function addNums (x,y){
 return x + y;
@@ -38,6 +39,7 @@ function evaluate(string){
         firstVariable = undefined;
         secondVariable = undefined;
         displayNums = result.toString().split("");
+        updateDisplay();
             break;
     
 
@@ -47,6 +49,7 @@ function evaluate(string){
         firstVariable = undefined;
         secondVariable = undefined;
         displayNums = result.toString().split("");
+        updateDisplay();
             break;
     
         case '*':
@@ -55,6 +58,7 @@ function evaluate(string){
         firstVariable = undefined;
         secondVariable = undefined;
         displayNums = result.toString().split("");
+        updateDisplay();
             break;
 
         case '/':
@@ -63,22 +67,18 @@ function evaluate(string){
         firstVariable = undefined;
         secondVariable = undefined;
         displayNums = result.toString().split("");
+        updateDisplay()
             break;
     }
 
 }
 const buttonInput =  document.querySelector('button');
-const forContainer = document.querySelector('.container');
-forContainer.addEventListener('click', (event) => {
-    if (event.target.tagName === 'BUTTON') {  // Check if a button was clicked
-      displayNums += event.target.value;      // Append the button's value to displayNums
-      display1.textContent = displayNums;     // Update the display
-    }
-  });
+
 buttonInput.addEventListener("click", (event) => {
     const buttonValue = event.target.innerText;
     if(/^[0-9]$/.test(buttonValue)){
         displayNums.push(buttonValue);
+        updateDisplay()
     }
     switch(buttonValue) {
         case 'AC':
@@ -87,6 +87,7 @@ buttonInput.addEventListener("click", (event) => {
         secondVariable = undefined;
         operatorVariable = '';
         result = 0;
+        updateDisplay()
             //code
             break;
         
@@ -97,6 +98,7 @@ buttonInput.addEventListener("click", (event) => {
             else {
                 displayNums.unshift('-');
             }
+            updateDisplay()
             //code
             break;
         
@@ -117,6 +119,7 @@ buttonInput.addEventListener("click", (event) => {
                 
             }
             //code
+            updateDisplay()
             break;
         
         case '/':
@@ -145,6 +148,7 @@ buttonInput.addEventListener("click", (event) => {
             }
             
             //code
+            updateDisplay()
             break;
         
         case '*':
@@ -172,6 +176,7 @@ buttonInput.addEventListener("click", (event) => {
                 displayNums = []
             }
             //code
+            updateDisplay()
             break;
         
         case '-':
@@ -199,6 +204,7 @@ buttonInput.addEventListener("click", (event) => {
                 displayNums = []
             }
             //code
+            updateDisplay()
             break;
         
         case '+':
@@ -226,6 +232,7 @@ buttonInput.addEventListener("click", (event) => {
                 displayNums = []
             }
             //code
+            updateDisplay()
             break;
         
         case '=':
@@ -249,6 +256,7 @@ buttonInput.addEventListener("click", (event) => {
                 evaluate(operatorVariable);
             }
             //code
+            updateDisplay()
             break;
         
         case '.':
@@ -259,6 +267,7 @@ buttonInput.addEventListener("click", (event) => {
                 displayNums.push('.');
             }
             //code
+            updateDisplay()
             break;
         
         
