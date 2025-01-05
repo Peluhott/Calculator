@@ -33,6 +33,8 @@ function evaluate(string){
         case '+':
         result = addNums(firstVariable, secondVariable);
         operatorVariable = '';
+        firstVariable = undefined;
+        secondVariable = undefined;
         displayNums = result.toString().split("");
             break;
     
@@ -40,18 +42,24 @@ function evaluate(string){
         case '-':
         result = subtractNums(firstVariable, secondVariable);
         operatorVariable = '';
+        firstVariable = undefined;
+        secondVariable = undefined;
         displayNums = result.toString().split("");
             break;
     
         case '*':
         result = multiplyNums(firstVariable, secondVariable);
         operatorVariable = '';
+        firstVariable = undefined;
+        secondVariable = undefined;
         displayNums = result.toString().split("");
             break;
 
         case '/':
         result = divideNums(firstVariable, secondVariable);
         operatorVariable = '';
+        firstVariable = undefined;
+        secondVariable = undefined;
         displayNums = result.toString().split("");
             break;
     }
@@ -63,9 +71,9 @@ buttonInput.addEventListener("click", (event) => {
     switch(buttonValue) {
         case 'AC':
         displayNums = []
-        firstVariable = 0;
-        secondVariable = 0;
-        operatorVariable = 0;
+        firstVariable = undefined;
+        secondVariable = undefined;
+        operatorVariable = '';
         result = 0;
             //code
             break;
@@ -194,6 +202,25 @@ buttonInput.addEventListener("click", (event) => {
             break;
         
         case '=':
+            if(firstVariable != undefined && displayNums.length != 0 ){
+                if(displayNums.length == 1 && displayNums[0] == '-'){
+                    break;
+                }
+                if(displayNums[0] == '-'){
+                    displayNums.shift()
+                    secondVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    displayNums  = []
+                    evaluate(operatorVariable);
+                }   
+                else {
+                    secondVariable = parseFloat(displayNums.join(''));
+                    displayNums = []
+                    evaluate(operatorVariable);
+                }
+            }
+            if(firstVariable != undefined && secondVariable != undefined && operatorVariable != ''){
+                evaluate(operatorVariable);
+            }
             //code
             break;
         
