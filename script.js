@@ -68,6 +68,9 @@ function evaluate(string){
 const buttonInput =  document.querySelector('button');
 buttonInput.addEventListener("click", (event) => {
     const buttonValue = event.target.innerText;
+    if(/^[0-9]$/.test(buttonValue)){
+        displayNums.push(buttonValue);
+    }
     switch(buttonValue) {
         case 'AC':
         displayNums = []
@@ -240,12 +243,16 @@ buttonInput.addEventListener("click", (event) => {
             break;
         
         case '.':
+            if(displayNums.includes('.')){
+                break;
+            }
+            else {
+                displayNums.push('.');
+            }
             //code
             break;
         
-         case '0-9':
-            //code
-            break;
+        
         
     }
 });
