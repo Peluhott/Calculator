@@ -33,22 +33,26 @@ function evaluate(string){
         case '+':
         result = addNums(firstVariable, secondVariable);
         operatorVariable = '';
+        displayNums = result.toString().split("");
             break;
     
 
         case '-':
         result = subtractNums(firstVariable, secondVariable);
         operatorVariable = '';
+        displayNums = result.toString().split("");
             break;
     
         case '*':
         result = multiplyNums(firstVariable, secondVariable);
         operatorVariable = '';
+        displayNums = result.toString().split("");
             break;
 
         case '/':
         result = divideNums(firstVariable, secondVariable);
         operatorVariable = '';
+        displayNums = result.toString().split("");
             break;
     }
 
