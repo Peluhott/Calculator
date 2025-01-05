@@ -8,6 +8,7 @@ body {
     height: 60px;
     width: 60px;
     margin: 2px;
+    border-radius: 12px;
 }
 
 .doubleSize {
@@ -22,6 +23,7 @@ body {
     height: 60px;
     width: 250px;
     border: solid black;
+    text-align: end;
 }
 .container {
     display: flex;
@@ -29,4 +31,5 @@ body {
     align-items: center;
     background-color: green;
     width: 300px;
+    padding: 20px 20px;
 }
