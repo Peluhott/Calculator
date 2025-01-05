@@ -58,10 +58,21 @@ buttonInput.addEventListener("click", (event) => {
     const buttonValue = event.target.innerText;
     switch(buttonValue) {
         case 'AC':
+        displayNums = []
+        firstVariable = 0;
+        secondVariable = 0;
+        operatorVariable = 0;
+        result = 0;
             //code
             break;
         
         case '+/-':
+            if(displayNums[0] == '-'){
+                displayNums.shift();
+            }
+            else {
+                displayNums.unshift('-');
+            }
             //code
             break;
         
