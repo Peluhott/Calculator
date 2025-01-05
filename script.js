@@ -89,6 +89,21 @@ buttonInput.addEventListener("click", (event) => {
             break;
         
          case '%':
+            if(operatorVariable != ''){
+                if(displayNums[0] == '-'){
+                    displayNums.shift()
+                    secondVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    displayNums  = []
+                    evaluate(operatorVariable);
+                }   
+                else {
+                    firstVariable = parseFloat(displayNums.join(''));
+                    result = firstVariable / 100;
+                    displayNums = result.toString().split("");
+                    
+                }
+                
+            }
             //code
             break;
         
