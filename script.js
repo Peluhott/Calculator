@@ -88,7 +88,7 @@ buttonInput.addEventListener("click", (event) => {
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
-                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    secondVariable = convertToNegative(parseFloat(displayNums.join('')));
                     displayNums  = []
                     evaluate(operatorVariable);
                 }   
@@ -116,7 +116,7 @@ buttonInput.addEventListener("click", (event) => {
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
-                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    secondVariable = convertToNegative(parseFloat(displayNums.join('')));
                     displayNums  = []
                     evaluate(operatorVariable);
                 }   
@@ -143,7 +143,7 @@ buttonInput.addEventListener("click", (event) => {
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
-                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    secondVariable = convertToNegative(parseFloat(displayNums.join('')));
                     displayNums  = []
                     evaluate(operatorVariable);
                 }   
@@ -170,7 +170,7 @@ buttonInput.addEventListener("click", (event) => {
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
-                    secondVariableVariable = convertToNegative(parseFloat(displayNums.join('')));
+                    secondVariable = convertToNegative(parseFloat(displayNums.join('')));
                     displayNums  = []
                     evaluate(operatorVariable);
                 }   
