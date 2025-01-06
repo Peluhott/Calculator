@@ -117,6 +117,7 @@ button.addEventListener("click", (event) => {
                     firstVariable = parseFloat(displayNums.join(''));
                     result = firstVariable / 100;
                     displayNums = result.toString().split("");
+                    updateDisplay()
                     
                     
                 }
@@ -133,11 +134,13 @@ button.addEventListener("click", (event) => {
                     secondVariable = convertToNegative(parseFloat(displayNums.join('')));
                     displayNums  = []
                     evaluate(operatorVariable);
+                    updateDisplay()
                 }   
                 else {
                     secondVariable = parseFloat(displayNums.join(''));
                     displayNums = []
                     evaluate(operatorVariable);
+                    updateDisplay()
                 }
             }
             operatorVariable = '/';
@@ -152,7 +155,7 @@ button.addEventListener("click", (event) => {
             }
             
             //code
-            updateDisplay()
+            
             break;
         
         case '*':
@@ -162,11 +165,13 @@ button.addEventListener("click", (event) => {
                     secondVariable = convertToNegative(parseFloat(displayNums.join('')));
                     displayNums  = []
                     evaluate(operatorVariable);
+                    updateDisplay()
                 }   
                 else {
                     secondVariable = parseFloat(displayNums.join(''));
                     displayNums = []
                     evaluate(operatorVariable);
+                    updateDisplay()
                 }
             }
             operatorVariable = '*';
@@ -180,7 +185,7 @@ button.addEventListener("click", (event) => {
                 displayNums = []
             }
             //code
-            updateDisplay()
+            
             break;
         
         case '-':
@@ -190,11 +195,13 @@ button.addEventListener("click", (event) => {
                     secondVariable = convertToNegative(parseFloat(displayNums.join('')));
                     displayNums  = []
                     evaluate(operatorVariable);
+                    updateDisplay()
                 }   
                 else {
                     secondVariable = parseFloat(displayNums.join(''));
                     displayNums = []
                     evaluate(operatorVariable);
+                    updateDisplay()
                 }
             }
             operatorVariable = '-';
@@ -208,7 +215,7 @@ button.addEventListener("click", (event) => {
                 displayNums = []
             }
             //code
-            updateDisplay()
+            
             break;
         
         case '+':
