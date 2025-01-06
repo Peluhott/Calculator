@@ -72,12 +72,15 @@ function evaluate(string){
     }
 
 }
-const buttonInput =  document.querySelector('button');
+const buttonInput =  document.querySelectorAll('button');
+buttonInput.forEach((button) => {
 
-buttonInput.addEventListener("click", (event) => {
+
+button.addEventListener("click", (event) => {
     const buttonValue = event.target.innerText;
     if(/^[0-9]$/.test(buttonValue)){
         displayNums.push(buttonValue);
+        console.log('button is pushed')
         updateDisplay()
     }
     switch(buttonValue) {
@@ -274,4 +277,4 @@ buttonInput.addEventListener("click", (event) => {
         
     }
 });
-
+});
