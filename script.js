@@ -106,6 +106,9 @@ button.addEventListener("click", (event) => {
             break;
         
          case '%':
+            if(displayNums.length === 0){
+                break;
+            }
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
@@ -124,10 +127,13 @@ button.addEventListener("click", (event) => {
                 
             }
             //code
-            updateDisplay()
+            
             break;
         
         case '/':
+            if(displayNums.length === 0){
+                break;
+            }
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
@@ -159,6 +165,9 @@ button.addEventListener("click", (event) => {
             break;
         
         case '*':
+            if(displayNums.length === 0){
+                break;
+            }
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
@@ -189,6 +198,9 @@ button.addEventListener("click", (event) => {
             break;
         
         case '-':
+            if(displayNums.length === 0){
+                break;
+            }
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
@@ -219,6 +231,9 @@ button.addEventListener("click", (event) => {
             break;
         
         case '+':
+            if(displayNums.length === 0){
+                break;
+            }
             if(operatorVariable != ''){
                 if(displayNums[0] == '-'){
                     displayNums.shift()
@@ -249,6 +264,9 @@ button.addEventListener("click", (event) => {
             break;
         
         case '=':
+            if(displayNums.length === 0){
+                break;
+            }
             if(firstVariable != undefined && displayNums.length != 0 ){
                 if(displayNums.length == 1 && displayNums[0] == '-'){
                     break;
