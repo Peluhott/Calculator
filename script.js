@@ -1,8 +1,8 @@
 let displayNums = []
-let firstVariable;
-let secondVariable;
-let operatorVariable;
-let result;
+let firstVariable = undefined;
+let secondVariable = undefined;
+let operatorVariable = '';
+let result = undefined;
 const display1 = document.querySelector('#display');
 function updateDisplay(){
     display1.textContent = displayNums.join('');}
