@@ -20,7 +20,13 @@ function multiplyNums (x,y){
 }
 
 function divideNums (x,y){
-    return x / y;
+    if(y === 0){
+        return "Zero division error"
+    }
+    else {
+      return x / y;  
+    }
+    
 }
 
 function convertToDecimal(num){
